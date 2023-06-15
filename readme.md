@@ -28,6 +28,8 @@ python puzzle8.py
 - You can change the initial and goal configuration in the main function on line 16 & 17 to check with other configurations
 - The program works with 15-puzzles as well for that when instanitating the grid you must to pass the third parameter `size=4` on the lines 63 to 66
 - If the configuration is doesn't have a solution, it will take a long time to produce the output because the A* is not optimized; and it will try to visit reachable configuration in order to find the solution.
+- One such example was created with grid-size 3 unsolvable configuraton, the result of number of visited nodes are in the temp.txt file.
+- For the above unsolvable configuration, the program took 3.62 hours to complete to figure out the solution is not achivable, and there is nothing left to explore in fringe.
 - To mitigate above issue, we can write a method in the grid to check weather the given configuration is solvable or not.
 - The proposed algorithm will need to count the number of inversions of the given configuration; which will be at the worst **O(n<sup>2</sup>)**, where n is size of the grid
 

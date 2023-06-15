@@ -38,6 +38,10 @@ def main():
     # call to astar algorithm to get a winning node
     winning = a_star(initial, goal, grid_width)
 
+    if winning is None:
+        print(f"{initial} configuration is not solvable.")
+        return -1
+
     # once we are here, means game is won or cannot find path
     path = list()
 
