@@ -33,7 +33,7 @@ def main():
 
     # solvable
     # initial = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 14, 15)
-    # initial = (3, 2, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+    # initial = (3, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
 
     # call to astar algorithm to get a winning node
     winning = a_star(initial, goal, grid_width)
@@ -226,8 +226,7 @@ class Grid:
         x, y = self.move_dict[move_name]
         old_x, old_y = self.blank
         new_x, new_y = old_x + x, old_y + y
-        return (0 <= new_x < self.size) and\
-               (0 <= new_y < self.size)
+        return (0 <= new_x < self.size) and (0 <= new_y < self.size)
 
     # return the grid
     def get_grid(self):
